@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
-    <display-name>Vaadin Web Application</display-name>
+    <display-name>Kreative Hospitality</display-name>
     <context-param>
         <description>Vaadin production mode</description>
         <param-name>productionMode</param-name>
@@ -8,17 +8,19 @@
     </context-param>
     <servlet>
         <servlet-name>Vaadin Application Servlet</servlet-name>
-        <servlet-class>com.kreative.webportal.WebPortalServlet</servlet-class>
+         <servlet-class>com.kreative.webportal.WebPortalServlet</servlet-class> 
+        <!-- <servlet-class>com.vaadin.terminal.gwt.server.ApplicationServlet</servlet-class> -->
         <init-param>
             <description>Vaadin application class to start</description>
             <param-name>application</param-name>
             <param-value>com.kreative.webportal.WebPortalApplication</param-value>
         </init-param>
-        <!-- 
+         
         <init-param>
             <param-name>closeIdleSessions</param-name>
             <param-value>false</param-value>
         </init-param>
+         
         <init-param>
             <param-name>org.atmosphere.useWebSocketAndServlet3</param-name>
             <param-value>false</param-value>
@@ -27,14 +29,14 @@
             <param-name>org.atmosphere.cpr.CometSupport</param-name>
             <param-value>TomcatCometSupport</param-value>
         </init-param>
-         -->
+         
 		<!-- <async-supported>true</async-supported>  -->
     </servlet>
     <servlet-mapping>
         <servlet-name>Vaadin Application Servlet</servlet-name>
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
-    <!--
+    
     <listener>
 	    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
@@ -50,22 +52,24 @@
 		<param-name>spring.profiles.active</param-name>
 		<param-value>frontend,scheduling</param-value>
 	</context-param>
-	 -->
-	 <!-- 
+	 
+	  
 	<context-param>
       	<param-name>contextConfigLocation</param-name>
       	<param-value>com.recommind.config.ContextConfiguration,com.recommind.frontend.config.FrontendConfiguration</param-value>
   	</context-param>
- 
+   
     <session-config>
-        <session-timeout>1</session-timeout>
+        <session-timeout>10</session-timeout>
     </session-config>
     
     <context-param>
 	    <param-name>heartbeatInterval</param-name>
 	    <param-value>30</param-value>
 	</context-param>
-	 -->
+	
+	 
+	 
 </web-app>
 
 

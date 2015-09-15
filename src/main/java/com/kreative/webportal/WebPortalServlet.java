@@ -11,7 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class WebPortalServlet
  */
-@WebServlet(description = "Main Servlet of the portal", urlPatterns = { "/WebPortalServlet" })
+//@WebServlet(description = "Main Servlet of the portal", urlPatterns = { "/WebPortalServlet" }, asyncSupported = true)
+@WebServlet(description = "Main Servlet of the portal", value = "/*", asyncSupported = true)
 public class WebPortalServlet extends ApplicationServlet {
 	private static final long serialVersionUID = 1L;
        
